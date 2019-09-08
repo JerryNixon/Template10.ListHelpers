@@ -1,0 +1,97 @@
+﻿<Page
+    x:Class="TestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:helpers="using:Template10"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <FrameworkElement.Resources>
+        
+        <Style x:Key="ItemNormalStyle" TargetType="Grid">
+            <Setter Property="RequestedTheme" Value="Dark" />
+            <Setter Property="Background" Value="{ThemeResource ButtonPointerOverBackgroundThemeBrush}" />
+        </Style>
+        
+        <Style x:Key="ItemSelectedStyle" TargetType="Grid">
+            <Setter Property="RequestedTheme" Value="Light" />
+            <Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}" />
+        </Style>
+        
+        <helpers:SelectorInfo
+            x:Key="MySelectorInfo" 
+            NormalStyle="{StaticResource ItemNormalStyle}"
+            SelectedStyle="{StaticResource ItemSelectedStyle}" />
+        
+        <DataTemplate x:Key="DataGridItemTemplate">
+            <Grid Height="200" Width="200" Style="{StaticResource ItemNormalStyle}">
+                <StackPanel VerticalAlignment="Bottom" Margin="8">
+                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Title" />
+                    <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="Subtitle" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="ListViewItemTemplate">
+            <Grid Height="200" MinWidth="200" Style="{StaticResource ItemNormalStyle}">
+                <StackPanel VerticalAlignment="Bottom" Margin="8">
+                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Title" />
+                    <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="Subtitle" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        
+    </FrameworkElement.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <GridView Grid.Column="0" SelectionMode="Single" 
+              helpers:GridViewHelper.SelectedItemStyle="{StaticResource MySelectorInfo}"
+              ItemTemplate="{StaticResource DataGridItemTemplate}"
+              Header="This is a GridView">
+            <GridView.Items>
+                <x:String>One</x:String>
+                <x:String>Two</x:String>
+                <x:String>Three</x:String>
+                <x:String>Four</x:String>
+                <x:String>Five</x:String>
+                <x:String>Six</x:String>
+                <x:String>Seven</x:String>
+                <x:String>Eight</x:String>
+                <x:String>Nine</x:String>
+                <x:String>Ten</x:String>
+            </GridView.Items>
+        </GridView>
+
+        <ListView Grid.Column="1" SelectionMode="Single" 
+              helpers:ListViewHelper.SelectedItemStyle="{StaticResource MySelectorInfo}"
+              ItemTemplate="{StaticResource ListViewItemTemplate}" 
+                  Header="This is a ListView">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="Padding" Value="0" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.Items>
+                <x:String>One</x:String>
+                <x:String>Two</x:String>
+                <x:String>Three</x:String>
+                <x:String>Four</x:String>
+                <x:String>Five</x:String>
+                <x:String>Six</x:String>
+                <x:String>Seven</x:String>
+                <x:String>Eight</x:String>
+                <x:String>Nine</x:String>
+                <x:String>Ten</x:String>
+            </ListView.Items>
+        </ListView>
+
+    </Grid>
+</Page>
