@@ -1,5 +1,5 @@
 # ListHelpers
-This library adds missing functionalities to ListView and GridView. Although this shares the Template 10 namespace, this library has no other connection to Template 10 and shares no code with that project. A single namespace just makes things easier.
+This library adds missing functionalities to ListView and GridView. Although this shares the Template 10 namespace, this library has no other connection to Template 10 and shares no code with that project. One namespace makes things easier.
 
 ## Custom Style for Selected Item
 When the user selects an item in a list, the ListItem changes automatically. However, there is no style changes applied to your custom template. This [attached property](https://docs.microsoft.com/en-us/windows/uwp/xaml-platform/custom-attached-properties) allows you to specify custom styles for each scenario.
