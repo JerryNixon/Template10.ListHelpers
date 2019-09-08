@@ -27,7 +27,7 @@ When the user selects an item in a list, the ListItem changes automatically. How
     <Setter Property="Background" Value="{ThemeResource ButtonBackgroundThemeBrush}" />
 </Style>
 
-    <helpers:SelectorInfo
+<helpers:SelectorInfo
     x:Key="MySelectorInfo" 
     NormalStyle="{StaticResource ItemNormalStyle}"
     SelectedStyle="{StaticResource ItemSelectedStyle}" />
