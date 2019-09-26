@@ -160,6 +160,6 @@
       $(PostBuildEventDependsOn);
       PostBuildMacros;
     </PostBuildEventDependsOn>
-    <PostBuildEvent>$(SolutionDir)nuget pack $(ProjectDir)ListHelpers.nuspec -OutputDirectory "c:\nuget" -Version @(VersionNumber)</PostBuildEvent>
+    <PostBuildEvent>$(SolutionDir)nuget pack $(ProjectDir).nuspec -OutputDirectory "c:\nuget" -Version @(VersionNumber)</PostBuildEvent>
   </PropertyGroup>
 </Project>

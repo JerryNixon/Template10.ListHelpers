@@ -11,7 +11,7 @@
     <authors>Jerry Nixon</authors>
     <owners>jerrynixon</owners>
     
-    <projectUrl>https://github.com/JerryNixon/ListHelperAttachedProperties</projectUrl>
+    <projectUrl>https://github.com/JerryNixon/Template10.ListHelpers</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/Windows-XAML/Template10/master/Assets/NuGetLogo.png</iconUrl>
 
     <license type="expression">Apache-2.0</license>
